@@ -14,6 +14,7 @@
 		E876E25D29B3AFE6007F559C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E876E25C29B3AFE6007F559C /* Assets.xcassets */; };
 		E876E26029B3AFE6007F559C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E876E25E29B3AFE6007F559C /* LaunchScreen.storyboard */; };
 		E876E26B29B3AFE6007F559C /* FlickrBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876E26A29B3AFE6007F559C /* FlickrBrowserTests.swift */; };
+		E876E28429B3B293007F559C /* RemoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876E28329B3B293007F559C /* RemoteClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		E876E26129B3AFE6007F559C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E876E26629B3AFE6007F559C /* FlickrBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E876E26A29B3AFE6007F559C /* FlickrBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrBrowserTests.swift; sourceTree = "<group>"; };
+		E876E28329B3B293007F559C /* RemoteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				E876E25329B3AFE4007F559C /* AppDelegate.swift */,
 				E876E25529B3AFE4007F559C /* SceneDelegate.swift */,
 				E876E25729B3AFE4007F559C /* ViewController.swift */,
+				E876E28329B3B293007F559C /* RemoteClient.swift */,
 				E876E25929B3AFE4007F559C /* Main.storyboard */,
 				E876E25C29B3AFE6007F559C /* Assets.xcassets */,
 				E876E25E29B3AFE6007F559C /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E876E28429B3B293007F559C /* RemoteClient.swift in Sources */,
 				E876E25829B3AFE4007F559C /* ViewController.swift in Sources */,
 				E876E25429B3AFE4007F559C /* AppDelegate.swift in Sources */,
 				E876E25629B3AFE4007F559C /* SceneDelegate.swift in Sources */,
