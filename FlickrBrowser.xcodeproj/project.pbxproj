@@ -17,6 +17,8 @@
 		E876E28429B3B293007F559C /* RemoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876E28329B3B293007F559C /* RemoteClient.swift */; };
 		E89CB20629B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB20529B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift */; };
 		E89CB20829B53EFC00EA4D3E /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB20729B53EFC00EA4D3E /* FlickrPhoto.swift */; };
+		E89CB20D29B5478500EA4D3E /* FlickrEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB20C29B5478500EA4D3E /* FlickrEndPoint.swift */; };
+		E89CB21029B547AD00EA4D3E /* FlickerEndpoint+PhotoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB20F29B547AD00EA4D3E /* FlickerEndpoint+PhotoSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		E876E28329B3B293007F559C /* RemoteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteClient.swift; sourceTree = "<group>"; };
 		E89CB20529B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchPhotosResponse.swift; sourceTree = "<group>"; };
 		E89CB20729B53EFC00EA4D3E /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		E89CB20C29B5478500EA4D3E /* FlickrEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrEndPoint.swift; sourceTree = "<group>"; };
+		E89CB20F29B547AD00EA4D3E /* FlickerEndpoint+PhotoSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlickerEndpoint+PhotoSearch.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,7 @@
 				E876E25329B3AFE4007F559C /* AppDelegate.swift */,
 				E876E25529B3AFE4007F559C /* SceneDelegate.swift */,
 				E876E25729B3AFE4007F559C /* ViewController.swift */,
-				E876E28329B3B293007F559C /* RemoteClient.swift */,
+				E89CB20929B540F300EA4D3E /* RemoteClient */,
 				E89CB20529B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift */,
 				E89CB20729B53EFC00EA4D3E /* FlickrPhoto.swift */,
 				E876E25929B3AFE4007F559C /* Main.storyboard */,
@@ -104,6 +108,40 @@
 				E876E26A29B3AFE6007F559C /* FlickrBrowserTests.swift */,
 			);
 			path = FlickrBrowserTests;
+			sourceTree = "<group>";
+		};
+		E89CB20929B540F300EA4D3E /* RemoteClient */ = {
+			isa = PBXGroup;
+			children = (
+				E876E28329B3B293007F559C /* RemoteClient.swift */,
+				E89CB20A29B5475B00EA4D3E /* Endpoint */,
+			);
+			name = RemoteClient;
+			sourceTree = "<group>";
+		};
+		E89CB20A29B5475B00EA4D3E /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				E89CB20B29B5476B00EA4D3E /* Flickr */,
+			);
+			name = Endpoint;
+			sourceTree = "<group>";
+		};
+		E89CB20B29B5476B00EA4D3E /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				E89CB20C29B5478500EA4D3E /* FlickrEndPoint.swift */,
+				E89CB20E29B5479600EA4D3E /* Methods */,
+			);
+			name = Flickr;
+			sourceTree = "<group>";
+		};
+		E89CB20E29B5479600EA4D3E /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				E89CB20F29B547AD00EA4D3E /* FlickerEndpoint+PhotoSearch.swift */,
+			);
+			name = Methods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +245,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E89CB21029B547AD00EA4D3E /* FlickerEndpoint+PhotoSearch.swift in Sources */,
 				E876E28429B3B293007F559C /* RemoteClient.swift in Sources */,
 				E89CB20829B53EFC00EA4D3E /* FlickrPhoto.swift in Sources */,
 				E89CB20629B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift in Sources */,
 				E876E25829B3AFE4007F559C /* ViewController.swift in Sources */,
+				E89CB20D29B5478500EA4D3E /* FlickrEndPoint.swift in Sources */,
 				E876E25429B3AFE4007F559C /* AppDelegate.swift in Sources */,
 				E876E25629B3AFE4007F559C /* SceneDelegate.swift in Sources */,
 			);
