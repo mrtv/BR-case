@@ -15,6 +15,8 @@
 		E876E26029B3AFE6007F559C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E876E25E29B3AFE6007F559C /* LaunchScreen.storyboard */; };
 		E876E26B29B3AFE6007F559C /* FlickrBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876E26A29B3AFE6007F559C /* FlickrBrowserTests.swift */; };
 		E876E28429B3B293007F559C /* RemoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876E28329B3B293007F559C /* RemoteClient.swift */; };
+		E89CB20629B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB20529B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift */; };
+		E89CB20829B53EFC00EA4D3E /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB20729B53EFC00EA4D3E /* FlickrPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		E876E26629B3AFE6007F559C /* FlickrBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E876E26A29B3AFE6007F559C /* FlickrBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrBrowserTests.swift; sourceTree = "<group>"; };
 		E876E28329B3B293007F559C /* RemoteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteClient.swift; sourceTree = "<group>"; };
+		E89CB20529B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchPhotosResponse.swift; sourceTree = "<group>"; };
+		E89CB20729B53EFC00EA4D3E /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				E876E25529B3AFE4007F559C /* SceneDelegate.swift */,
 				E876E25729B3AFE4007F559C /* ViewController.swift */,
 				E876E28329B3B293007F559C /* RemoteClient.swift */,
+				E89CB20529B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift */,
+				E89CB20729B53EFC00EA4D3E /* FlickrPhoto.swift */,
 				E876E25929B3AFE4007F559C /* Main.storyboard */,
 				E876E25C29B3AFE6007F559C /* Assets.xcassets */,
 				E876E25E29B3AFE6007F559C /* LaunchScreen.storyboard */,
@@ -202,6 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E876E28429B3B293007F559C /* RemoteClient.swift in Sources */,
+				E89CB20829B53EFC00EA4D3E /* FlickrPhoto.swift in Sources */,
+				E89CB20629B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift in Sources */,
 				E876E25829B3AFE4007F559C /* ViewController.swift in Sources */,
 				E876E25429B3AFE4007F559C /* AppDelegate.swift in Sources */,
 				E876E25629B3AFE4007F559C /* SceneDelegate.swift in Sources */,
