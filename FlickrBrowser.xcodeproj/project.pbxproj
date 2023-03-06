@@ -104,7 +104,7 @@
 			children = (
 				E876E25329B3AFE4007F559C /* AppDelegate.swift */,
 				E876E25529B3AFE4007F559C /* SceneDelegate.swift */,
-				E89CB22229B586DF00EA4D3E /* SearchPhotoUseCase.swift */,
+				E89CB22729B6A79F00EA4D3E /* UseCases */,
 				E89CB21929B57F8C00EA4D3E /* Scenes */,
 				E89CB21729B57DCE00EA4D3E /* Networking */,
 				E876E25929B3AFE4007F559C /* Main.storyboard */,
@@ -211,6 +211,14 @@
 				E89CB22429B6A3F400EA4D3E /* MainCoordinator.swift */,
 			);
 			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		E89CB22729B6A79F00EA4D3E /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E89CB22229B586DF00EA4D3E /* SearchPhotoUseCase.swift */,
+			);
+			name = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
