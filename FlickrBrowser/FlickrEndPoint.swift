@@ -7,8 +7,7 @@
 
 import Foundation
 
-class FlickrEndpoint {
-    let queryItems: [URLQueryItem]
+class FlickrEndpoint: Endpoint {
     let apiKey: String
     let format: String
     let noJSONCallback: String
@@ -16,7 +15,7 @@ class FlickrEndpoint {
     
     convenience init(method: String, queryItems: [URLQueryItem]) {
         self.init(queryItems: queryItems,
-                  apiKey: "1508443e49213ff84d566777dc211f2a", 
+                  apiKey: "1508443e49213ff84d566777dc211f2a",
                   format: "json",
                   noJSONCallback: "1",
                   method: method)
@@ -31,11 +30,13 @@ class FlickrEndpoint {
         self.format = format
         self.noJSONCallback = noJSONCallback
         self.method = method
-        self.queryItems = [
+        
+        super.init(queryItems: [
             URLQueryItem(name: "api_key", value: apiKey),
             URLQueryItem(name: "format", value: format),
             URLQueryItem(name: "nojsoncallback", value: noJSONCallback),
             URLQueryItem(name: "method", value: method)
         ] + queryItems
+        )
     }
 }
