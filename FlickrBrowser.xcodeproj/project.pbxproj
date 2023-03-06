@@ -26,6 +26,7 @@
 		E89CB21E29B57FD100EA4D3E /* PhotoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB21D29B57FD100EA4D3E /* PhotoSearchViewModel.swift */; };
 		E89CB22129B5800900EA4D3E /* PhotoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB22029B5800900EA4D3E /* PhotoListItem.swift */; };
 		E89CB22329B586DF00EA4D3E /* SearchPhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB22229B586DF00EA4D3E /* SearchPhotoUseCase.swift */; };
+		E89CB22529B6A3F400EA4D3E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB22429B6A3F400EA4D3E /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E89CB21D29B57FD100EA4D3E /* PhotoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewModel.swift; sourceTree = "<group>"; };
 		E89CB22029B5800900EA4D3E /* PhotoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListItem.swift; sourceTree = "<group>"; };
 		E89CB22229B586DF00EA4D3E /* SearchPhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoUseCase.swift; sourceTree = "<group>"; };
+		E89CB22429B6A3F400EA4D3E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 		E89CB21929B57F8C00EA4D3E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E89CB22629B6A6F300EA4D3E /* Coordinator */,
 				E89CB21A29B57F9400EA4D3E /* PhotoSearch */,
 			);
 			name = Scenes;
@@ -203,6 +206,14 @@
 				E89CB22029B5800900EA4D3E /* PhotoListItem.swift */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		E89CB22629B6A6F300EA4D3E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E89CB22429B6A3F400EA4D3E /* MainCoordinator.swift */,
+			);
+			name = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 				E89CB20D29B5478500EA4D3E /* FlickrEndPoint.swift in Sources */,
 				E876E25429B3AFE4007F559C /* AppDelegate.swift in Sources */,
 				E876E25629B3AFE4007F559C /* SceneDelegate.swift in Sources */,
+				E89CB22529B6A3F400EA4D3E /* MainCoordinator.swift in Sources */,
 				E89CB21C29B57FB600EA4D3E /* PhotoSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
