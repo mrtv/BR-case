@@ -97,9 +97,7 @@
 				E876E25329B3AFE4007F559C /* AppDelegate.swift */,
 				E876E25529B3AFE4007F559C /* SceneDelegate.swift */,
 				E876E25729B3AFE4007F559C /* ViewController.swift */,
-				E89CB20929B540F300EA4D3E /* RemoteClient */,
-				E89CB20529B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift */,
-				E89CB20729B53EFC00EA4D3E /* FlickrPhoto.swift */,
+				E89CB21729B57DCE00EA4D3E /* Networking */,
 				E876E25929B3AFE4007F559C /* Main.storyboard */,
 				E876E25C29B3AFE6007F559C /* Assets.xcassets */,
 				E876E25E29B3AFE6007F559C /* LaunchScreen.storyboard */,
@@ -151,6 +149,24 @@
 				E89CB20F29B547AD00EA4D3E /* FlickerEndpoint+PhotoSearch.swift */,
 			);
 			name = Methods;
+			sourceTree = "<group>";
+		};
+		E89CB21729B57DCE00EA4D3E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E89CB20929B540F300EA4D3E /* RemoteClient */,
+				E89CB21829B57DDB00EA4D3E /* Models */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		E89CB21829B57DDB00EA4D3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E89CB20529B53ED900EA4D3E /* FlickrSearchPhotosResponse.swift */,
+				E89CB20729B53EFC00EA4D3E /* FlickrPhoto.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
