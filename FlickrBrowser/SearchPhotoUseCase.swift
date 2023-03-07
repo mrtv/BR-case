@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol SearchPhotoUseCase {
-    func execute(searchString: String) -> AnyPublisher<[PhotoListItem], Error>
+    func execute(searchString: String, page: Int, pageSize: Int) -> AnyPublisher<[PhotoListItem], Error>
 }
 
 class DefaultSearchPhotoUseCase: SearchPhotoUseCase {
@@ -19,8 +19,8 @@ class DefaultSearchPhotoUseCase: SearchPhotoUseCase {
         self.client = client
     }
     
-    func execute(searchString: String) -> AnyPublisher<[PhotoListItem], Error> {
-        let endpoint = FlickrEndpoint.search(query: searchString)
+    func execute(searchString: String, page: Int = 0, pageSize: Int = 25) -> AnyPublisher<[PhotoListItem], Error> {
+        let endpoint = FlickrEndpoint.search(query: searchString, pageSize: pageSize, page: page)
         let result: AnyPublisher<FlickrSearchPhotosResponse, Swift.Error> = client.request(endpoint)
         return result.map { response in
             response.photos.map {

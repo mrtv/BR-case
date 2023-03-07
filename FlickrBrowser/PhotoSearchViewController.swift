@@ -16,7 +16,8 @@ class PhotoSearchViewController: UIViewController {
     private var dataSource: DataSource!
     private var cancellables: [AnyCancellable] = []
     private let selection = PassthroughSubject<Int, Never>()
-    private let search = PassthroughSubject<String, Never>()
+    private let search = PassthroughSubject<(String, Int), Never>()
+    private let loadMore = PassthroughSubject<(String, Int), Never>()
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -37,7 +38,8 @@ class PhotoSearchViewController: UIViewController {
             .store(in: &cancellables)
         
         _ = self.viewModel.transform(search: search.eraseToAnyPublisher(),
-                                                    select: selection.eraseToAnyPublisher())
+                                     select: selection.eraseToAnyPublisher(),
+                                     loadMore: loadMore.eraseToAnyPublisher())
     }
     
     func reload() {
@@ -50,7 +52,7 @@ class PhotoSearchViewController: UIViewController {
     
     @IBAction func editingChanged(_ sender: UITextField) {
         let searchPrefix = sender.text ?? ""
-        search.send(searchPrefix)
+        search.send((searchPrefix, 0))
     }
     
     //MARK: - UICollectionView configuration
@@ -88,5 +90,10 @@ extension PhotoSearchViewController {
 extension PhotoSearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selection.send(indexPath.row)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        viewModel.loadMoreResults(index: indexPath.row)
+        loadMore.send((searchTextField.text ?? "", indexPath.row))
     }
 }

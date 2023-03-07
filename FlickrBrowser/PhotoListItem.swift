@@ -8,6 +8,7 @@
 import Foundation
 
 struct PhotoListItem: Hashable {
+    let uuid = UUID() // Workaround for duplicate items on FlickrAPI pagination
     let id: String
     let title: String
     let thumbnailImageURL: URL?

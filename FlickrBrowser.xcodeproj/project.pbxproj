@@ -208,10 +208,10 @@
 		E89CB21A29B57F9400EA4D3E /* PhotoSearch */ = {
 			isa = PBXGroup;
 			children = (
-				E89CB21F29B57FF300EA4D3E /* DataModel */,
 				E89CB21B29B57FB600EA4D3E /* PhotoSearchViewController.swift */,
-				E89CB22829B6AA4100EA4D3E /* Cell */,
 				E89CB21D29B57FD100EA4D3E /* PhotoSearchViewModel.swift */,
+				E89CB22829B6AA4100EA4D3E /* Cell */,
+				E89CB21F29B57FF300EA4D3E /* DataModel */,
 			);
 			name = PhotoSearch;
 			sourceTree = "<group>";
