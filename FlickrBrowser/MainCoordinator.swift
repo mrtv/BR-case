@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-protocol Coordinator: AnyObject {
-    var navigationController: UINavigationController { get set}
-    var childCoordinators: [Coordinator] { get set }
-    func start()
-}
-
 /// Composition root
 class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     private let storyboard = UIStoryboard(name: "Main", bundle: .main)
