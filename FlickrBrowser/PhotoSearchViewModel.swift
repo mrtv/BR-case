@@ -14,12 +14,17 @@ class PhotoSearchViewModel {
     @Published private(set) var items: [PhotoListItem] = []
     private let searchPhotosUseCase: SearchPhotoUseCase
     private var cancellables: [AnyCancellable] = []
-
-    init(searchPhotosUseCase: SearchPhotoUseCase) {
+    private var coordinator: MainCoordinator
+    
+    init(searchPhotosUseCase: SearchPhotoUseCase,
+         coordinator: MainCoordinator) {
         self.searchPhotosUseCase = searchPhotosUseCase
+        self.coordinator = coordinator
     }
     
-    func transform(search: AnyPublisher<String, Never>) -> AnyPublisher<[PhotoListItem], Never>{
+    func transform(search: AnyPublisher<String, Never>,
+                   select: AnyPublisher<Int, Never>) -> AnyPublisher<[PhotoListItem], Never>{
+        //search
         let output = search
             .receive(on: RunLoop.main)
             .map { text in
@@ -31,6 +36,19 @@ class PhotoSearchViewModel {
                 self?.items = photoListItems
             }.store(in: &cancellables)
          
+        //select
+        select.sink { [weak self] selectedIndex in
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                
+                self.coordinator.showDetail(selectedPhoto: self.items[selectedIndex])
+            }
+        }.store(in: &cancellables)
+        
         return output.eraseToAnyPublisher()
     }
+    
+//    func transform() -> AnyPublisher<Void, Never> {
+//
+//    }
 }

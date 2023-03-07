@@ -36,7 +36,8 @@ class PhotoSearchViewController: UIViewController {
             }
             .store(in: &cancellables)
         
-        let searchOutput = self.viewModel.transform(search: search.eraseToAnyPublisher())
+        let searchOutput = self.viewModel.transform(search: search.eraseToAnyPublisher(),
+                                                    select: selection.eraseToAnyPublisher())
         searchOutput.sink { [unowned self] photos in
             self.reload()
         }.store(in: &cancellables)
@@ -67,6 +68,7 @@ class PhotoSearchViewController: UIViewController {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: 100, height: 140)
         self.collectionView.collectionViewLayout = flowLayout
+        self.collectionView.delegate = self
     }
 }
 
@@ -82,5 +84,12 @@ extension PhotoSearchViewController {
                 cell?.viewModel = PhotoItemCellViewModel(item: item)
                 return cell
             })
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+extension PhotoSearchViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selection.send(indexPath.row)
     }
 }
