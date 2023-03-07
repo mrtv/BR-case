@@ -30,7 +30,7 @@ class PhotoSearchViewModel {
             receiveValue: { [weak self] photoListItems in
                 self?.items = photoListItems
             }.store(in: &cancellables)
-        
+         
         return output.eraseToAnyPublisher()
     }
 }
