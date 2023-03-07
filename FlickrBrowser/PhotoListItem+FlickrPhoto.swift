@@ -8,10 +8,10 @@
 import Foundation
 
 extension PhotoListItem {
-    convenience init(photo: FlickrPhoto) {
-        self.init(id: $0.id,
-                  title: $0.title,
-                  thumbnailImageURL: $0.getImageURL(for: .thumbnail),
-                  fullImageURL: $0.getImageURL(for: .full))
+    init(photo: FlickrPhoto) {
+        self.init(id: photo.id,
+                  title: photo.title,
+                  thumbnailImageURL: photo.getImageURL(for: .thumbnail),
+                  fullImageURL: photo.getImageURL(for: .full))
     }
 }
