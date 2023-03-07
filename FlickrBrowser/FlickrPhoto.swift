@@ -47,4 +47,8 @@ class FlickrPhoto: Decodable {
     func getThumbnailURL() -> URL? {
         return URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_s.jpg")
     }
+    
+    func getFullImageURL() -> URL? {
+        return URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_l.jpg")
+    }
 }
