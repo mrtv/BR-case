@@ -34,6 +34,7 @@
 		E89CB23829B6F93F00EA4D3E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB23729B6F93F00EA4D3E /* Coordinator.swift */; };
 		E89CB23A29B6F9B800EA4D3E /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB23929B6F9B800EA4D3E /* MainCoordinatorTests.swift */; };
 		E89CB23C29B6FB1300EA4D3E /* PhotoDetailCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB23B29B6FB1300EA4D3E /* PhotoDetailCoordinatorTests.swift */; };
+		E8C53C0029B7308C00C1893A /* PhotoSearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C53BFF29B7308C00C1893A /* PhotoSearchViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E89CB23729B6F93F00EA4D3E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E89CB23929B6F9B800EA4D3E /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
 		E89CB23B29B6FB1300EA4D3E /* PhotoDetailCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCoordinatorTests.swift; sourceTree = "<group>"; };
+		E8C53BFF29B7308C00C1893A /* PhotoSearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				E89CB21529B5794D00EA4D3E /* EndpointTests.swift */,
 				E89CB23929B6F9B800EA4D3E /* MainCoordinatorTests.swift */,
 				E89CB23B29B6FB1300EA4D3E /* PhotoDetailCoordinatorTests.swift */,
+				E8C53BFF29B7308C00C1893A /* PhotoSearchViewModelTests.swift */,
 			);
 			path = FlickrBrowserTests;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E89CB21629B5794D00EA4D3E /* EndpointTests.swift in Sources */,
+				E8C53C0029B7308C00C1893A /* PhotoSearchViewModelTests.swift in Sources */,
 				E89CB23C29B6FB1300EA4D3E /* PhotoDetailCoordinatorTests.swift in Sources */,
 				E89CB23A29B6F9B800EA4D3E /* MainCoordinatorTests.swift in Sources */,
 			);
