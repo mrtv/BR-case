@@ -31,6 +31,7 @@
 		E89CB22F29B6DBE100EA4D3E /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB22E29B6DBE100EA4D3E /* PhotoDetailViewController.swift */; };
 		E89CB23129B6E4DA00EA4D3E /* PhotoDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB23029B6E4DA00EA4D3E /* PhotoDetailCoordinator.swift */; };
 		E89CB23329B6EC2200EA4D3E /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB23229B6EC2200EA4D3E /* PhotoDetailViewModel.swift */; };
+		E89CB23529B6F7FF00EA4D3E /* PhotoListItem+FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CB23429B6F7FF00EA4D3E /* PhotoListItem+FlickrPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E89CB22E29B6DBE100EA4D3E /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		E89CB23029B6E4DA00EA4D3E /* PhotoDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCoordinator.swift; sourceTree = "<group>"; };
 		E89CB23229B6EC2200EA4D3E /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		E89CB23429B6F7FF00EA4D3E /* PhotoListItem+FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoListItem+FlickrPhoto.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				E89CB22029B5800900EA4D3E /* PhotoListItem.swift */,
+				E89CB23629B6F80700EA4D3E /* Adapter */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -250,6 +253,14 @@
 				E89CB23229B6EC2200EA4D3E /* PhotoDetailViewModel.swift */,
 			);
 			name = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		E89CB23629B6F80700EA4D3E /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				E89CB23429B6F7FF00EA4D3E /* PhotoListItem+FlickrPhoto.swift */,
+			);
+			name = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +367,7 @@
 				E89CB21429B5767600EA4D3E /* BaseURLComponents.swift in Sources */,
 				E89CB21E29B57FD100EA4D3E /* PhotoSearchViewModel.swift in Sources */,
 				E89CB21029B547AD00EA4D3E /* FlickerEndpoint+PhotoSearch.swift in Sources */,
+				E89CB23529B6F7FF00EA4D3E /* PhotoListItem+FlickrPhoto.swift in Sources */,
 				E89CB21229B562B500EA4D3E /* Endpoint.swift in Sources */,
 				E89CB22329B586DF00EA4D3E /* SearchPhotoUseCase.swift in Sources */,
 				E876E28429B3B293007F559C /* RemoteClient.swift in Sources */,

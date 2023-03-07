@@ -24,10 +24,7 @@ class DefaultSearchPhotoUseCase: SearchPhotoUseCase {
         let result: AnyPublisher<FlickrSearchPhotosResponse, Swift.Error> = client.request(endpoint)
         return result.map { response in
             response.photos.map {
-                PhotoListItem(id: $0.id,
-                              title: $0.title,
-                              thumbnailImageURL: $0.getImageURL(for: .thumbnail),
-                              fullImageURL: $0.getImageURL(for: .full))
+                PhotoListItem(photo: $0)
             }
         }.eraseToAnyPublisher()
     }
