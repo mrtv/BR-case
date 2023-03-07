@@ -110,6 +110,40 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-5.6338028169014089"/>
         </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="PFi-uo-tYk">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailViewController" id="piq-sz-ibs" customClass="PhotoDetailViewController" customModule="FlickrBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ilq-eE-4wm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j71-Nw-2mT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="czv-lj-Kk0">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HnJ-va-P52"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j71-Nw-2mT" firstAttribute="leading" secondItem="HnJ-va-P52" secondAttribute="leading" id="Rhj-Tg-lAF"/>
+                            <constraint firstItem="HnJ-va-P52" firstAttribute="bottom" secondItem="j71-Nw-2mT" secondAttribute="bottom" id="b3a-5y-eHy"/>
+                            <constraint firstItem="HnJ-va-P52" firstAttribute="trailing" secondItem="j71-Nw-2mT" secondAttribute="trailing" id="dhM-Eo-5UU"/>
+                            <constraint firstItem="j71-Nw-2mT" firstAttribute="top" secondItem="HnJ-va-P52" secondAttribute="top" id="vBy-Xk-aHY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="czv-lj-Kk0" id="w2J-ha-4eX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRP-nH-gqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="-6"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
