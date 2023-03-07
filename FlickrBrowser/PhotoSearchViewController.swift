@@ -36,11 +36,8 @@ class PhotoSearchViewController: UIViewController {
             }
             .store(in: &cancellables)
         
-        let searchOutput = self.viewModel.transform(search: search.eraseToAnyPublisher(),
+        _ = self.viewModel.transform(search: search.eraseToAnyPublisher(),
                                                     select: selection.eraseToAnyPublisher())
-        searchOutput.sink { [unowned self] photos in
-            self.reload()
-        }.store(in: &cancellables)
     }
     
     func reload() {
