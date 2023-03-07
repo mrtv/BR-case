@@ -10,5 +10,5 @@ import Foundation
 struct PhotoListItem: Hashable {
     let id: String
     let title: String
-    
+    let thumbnailImageURL: URL?
 }

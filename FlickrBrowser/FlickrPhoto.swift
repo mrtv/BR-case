@@ -43,4 +43,8 @@ class FlickrPhoto: Decodable {
         self.isFriend = try root.decode(Int.self, forKey: .isFriend)
         self.isFamily = try root.decode(Int.self, forKey: .isFamily)
     }
+    
+    func getThumbnailURL() -> URL? {
+        return URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_s.jpg")
+    }
 }
