@@ -44,11 +44,12 @@ class FlickrPhoto: Decodable {
         self.isFamily = try root.decode(Int.self, forKey: .isFamily)
     }
     
-    func getThumbnailURL() -> URL? {
-        return URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_s.jpg")
+    enum ImageSize: String {
+        case thumbnail = "s"
+        case full = "b"
     }
     
-    func getFullImageURL() -> URL? {
-        return URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_l.jpg")
+    func getImageURL(for size: ImageSize) -> URL? {
+        return URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_\(size.rawValue).jpg")
     }
 }

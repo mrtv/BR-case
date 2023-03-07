@@ -26,8 +26,8 @@ class DefaultSearchPhotoUseCase: SearchPhotoUseCase {
             response.photos.map {
                 PhotoListItem(id: $0.id,
                               title: $0.title,
-                              thumbnailImageURL: $0.getThumbnailURL(),
-                              fullImageURL: $0.getFullImageURL())
+                              thumbnailImageURL: $0.getImageURL(for: .thumbnail),
+                              fullImageURL: $0.getImageURL(for: .full))
             }
         }.eraseToAnyPublisher()
     }
